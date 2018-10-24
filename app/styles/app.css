@@ -1,0 +1,17 @@
+html, body.ember-application {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body > .ember-view {
+    height: 100%;
+}
+
+.graph-container {
+    height: 100%;
+}
+
+#cy {
+    height: 100%;
+}
