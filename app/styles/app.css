@@ -1,3 +1,7 @@
+/* @imports must appear at top of stylesheet to be valid CSS */
+@import 'graphs.css';
+
+/* Any CSS rules must go *after* any @imports */
 html, body.ember-application {
     margin: 0;
     padding: 0;
@@ -8,10 +12,3 @@ body > .ember-view {
     height: 100%;
 }
 
-.graph-container {
-    height: 100%;
-}
-
-#cy {
-    height: 100%;
-}
