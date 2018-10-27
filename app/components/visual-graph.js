@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import cytoscape from 'cytoscape';
+import { computed } from '@ember/object';
 
 export default Component.extend({
     didInsertElement() {
@@ -12,33 +13,39 @@ export default Component.extend({
         });
     },
 
-    elements: [
-        { data: { id: 'a' } },
-        { data: { id: 'b' } },
-        { data: { id: 'ab', source: 'a', target: 'b' } }
-    ],
+    elements: computed(function() {
+        return [
+            { data: { id: 'a' } },
+            { data: { id: 'b' } },
+            { data: { id: 'ab', source: 'a', target: 'b' } }
+        ];
+    }),
 
-    style: [
-        {
-            selector: 'node',
-            style: {
-                'background-color': '#666',
-                'label': 'data(id)'
+    style: computed(function() {
+        return [
+            {
+                selector: 'node',
+                style: {
+                    'background-color': '#666',
+                    'label': 'data(id)'
+                }
+            },
+            {
+                selector: 'edge',
+                style: {
+                    'width': 3,
+                    'line-color': '#ccc',
+                    'target-arrow-color': '#ccc',
+                    'target-arrow-shape': 'triangle'
+                }
             }
-        },
-        {
-            selector: 'edge',
-            style: {
-                'width': 3,
-                'line-color': '#ccc',
-                'target-arrow-color': '#ccc',
-                'target-arrow-shape': 'triangle'
-            }
-        }
-    ],
+        ];
+    }),
 
-    layout: {
-        name: 'grid',
-        rows: 1
-    },
+    layout: computed(function() {
+        return {
+            name: 'grid',
+            rows: 1
+        };
+    }),
 });
