@@ -1,7 +1,12 @@
 # graph-scope
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Concepts
+
+* Scope of all graphs
+* Scope of some graphs
+* Scope of a single graph
+* Scope of a node within a graph
+* Scope of a sub-graph
 
 ## Prerequisites
 
@@ -10,23 +15,18 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:skarger/graph-scope.git`
 * `cd graph-scope`
 * `npm install`
 
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* Visit app at [http://localhost:4200](http://localhost:4200).
+* Visit tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Running Tests
 
@@ -46,12 +46,4 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* TODO
