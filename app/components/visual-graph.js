@@ -5,19 +5,24 @@ import { computed } from '@ember/object';
 export default Component.extend({
     didInsertElement() {
         this._super(...arguments);
-        cytoscape({
+        this.set('cy', cytoscape({
             container: this.$('#cy'),
             elements: this.elements,
             style: this.style,
-            layout: this.layout,
-        });
+            layout: this.cyLayout,
+        }));
+
+        // for debugging
+        window.cy = this.cy;
     },
 
     elements: computed(function() {
         return [
             { data: { id: 'a' } },
             { data: { id: 'b' } },
-            { data: { id: 'ab', source: 'a', target: 'b' } }
+            { data: { id: 'c' } },
+            { data: { id: 'ab', source: 'a', target: 'b' } },
+            { data: { id: 'bc', source: 'b', target: 'c' } },
         ];
     }),
 
@@ -42,10 +47,9 @@ export default Component.extend({
         ];
     }),
 
-    layout: computed(function() {
+    cyLayout: computed(function() {
         return {
-            name: 'grid',
-            rows: 1
+            name: 'cose',
         };
     }),
 });

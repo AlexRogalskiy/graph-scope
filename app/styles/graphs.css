@@ -1,5 +1,7 @@
 .graph-container {
-    height: 100%;
+    height: 70%;
+    margin: 3%;
+    border: #888 1px solid;
 }
 
 #cy {
